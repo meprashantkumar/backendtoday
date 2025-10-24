@@ -16,7 +16,7 @@ const router = express.Router();
 router.post("/new", isAuth, uploadFile, newPost);
 
 router.put("/:id", isAuth, editCaption);
-router.delete("/:id", isAuth, deletePost);
+router.post("/:id/delete", isAuth, deletePost);
 
 router.get("/all", isAuth, getAllPosts);
 
